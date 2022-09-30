@@ -28,7 +28,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+		"jest": true
   },
   "rules": {
     "no-unused-vars": "off",
@@ -79,7 +80,7 @@
     },
     // use Cypress lint rules in Cypress test files
     {
-      "files": ["cypress/**/?(*.)+(spec|test).[jt]s?(x)", "cypress/support/*"],
+      "files": ["cypress/e2e/**/*.cy.js", "cypress/support/*"],
       "extends": ["plugin:cypress/recommended"],
       "env": { "cypress/globals": true }
     }
